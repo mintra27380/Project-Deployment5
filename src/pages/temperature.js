@@ -1,8 +1,9 @@
-"use client";
+""use client";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link"; // ✅ เพิ่มการ import Link
-git add .
+
+
 
 export default function TemperaturePage() {
   const [droneInfo, setDroneInfo] = useState({
