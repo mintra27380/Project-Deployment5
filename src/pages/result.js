@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import './re.css'; 
 
 export default function ResultPage() {
   const [logs, setLogs] = useState([]);
@@ -79,17 +80,26 @@ export default function ResultPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {logs.map((log, index) => (
-                    <tr key={index}>
-                      <td>{formatDate(log)}</td>
-                      <td>{log.country}</td>
-                      <td>{log.drone_id}</td>
-                      <td>{log.drone_name}</td>
-                      <td style={{ color: "#00cfff", textAlign: "right" }}>
-                        {formatTemp(log)}&#8451;
-                      </td>
-                    </tr>
-                  ))}
+                  {logs.map((log, index) => {
+                    const temp = parseFloat(formatTemp(log));
+                    return (
+                      <tr key={index}>
+                        <td>{formatDate(log)}</td>
+                        <td>{log.country}</td>
+                        <td>{log.drone_id}</td>
+                        <td>{log.drone_name}</td>
+                        <td
+                          style={{
+                            textAlign: "right",
+                            color: temp >= 50 ? "red" : "#000",
+                            fontWeight: temp >= 50 ? "600" : "400",
+                          }}
+                        >
+                          {temp}&#8451;
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>

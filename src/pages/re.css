@@ -54,20 +54,22 @@ nav a.active {
   padding-right: 20px;
 }
 
-/* ---------- Center Box ---------- */
+/* ---------- Center Box (Updated) ---------- */
 .center-box {
-    background-color: #ffffffee;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    max-width: 1200px;    
-    width: 100%;
-    padding: 40px;          
-    margin-bottom: 40px;
-    text-align: left;
-  }
-  
+  background-color: #ffffffee;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  max-width: 90%;
+  width: 100%;
+  padding: 50px 50px;
+  margin-top: -30px;
+  margin-bottom: 60px;
+  text-align: left;
+  transition: transform 0.3s ease;
+  transform: translateY(-20px);
+}
 
-
+/* ---------- Title ---------- */
 .title {
   font-size: 26px;
   font-weight: 600;
@@ -75,65 +77,59 @@ nav a.active {
   margin-bottom: 25px;
 }
 
+/* ---------- Table Styles ---------- */
 .table-container {
   width: 100%;
   overflow-x: auto;
 }
 
-
 .log-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 16px;
-  color: #000;
-}
-
-
-.log-table thead {
-  background-color: #fff4b8; /* soft yellow */
-}
-.log-table th {
-  padding: 14px 20px;
-  text-align: center;
-  border: 1px solid #ddd;
-  font-weight: 600;
-  color: #000;
-}
-
-
-.log-table td {
-  padding: 14px 20px;
-  text-align: center;
-  border: 1px solid #eee;
-  color: #000;
-}
-
-
-.log-table tbody tr:nth-child(even) {
-  background-color: #fffce3;
-}
-.log-table tbody tr:nth-child(odd) {
-  background-color: #ffffff;
-}
-
-
-.log-table tbody tr:hover {
-  background-color: #ffe;
-  transition: background 0.2s ease-in-out;
-}
-.log-table td {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    table-layout: auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .log-table thead {
+    background-color: #e3f2fd; /* ✅ ฟ้าอ่อนแบบในภาพ */
+    color: #1976d2;
+  }
+  
+  .log-table th,
+  .log-table td {
     padding: 14px 20px;
     text-align: center;
-    border: 1px solid #eee;
-    color: #000 !important; 
-    font-family: "Poppins", sans-serif; 
-    font-weight: 400;
+    border-bottom: 1px solid #e0e0e0;
   }
+  
+  .log-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .log-table tbody tr:hover {
+    background-color: #f1faff; /* ✅ ฟ้าจางเมื่อ hover */
+    transition: background-color 0.2s ease;
+  }
+  
 
-
+/* ---------- No Data Message ---------- */
 .no-data {
   margin-top: 20px;
   font-size: 16px;
   color: #777;
   text-align: center;
 }
+.temp-cell {
+    text-align: right;
+    color: #000;
+  }
+  
+  .temp-hot {
+    color: red;
+    font-weight: 600;
+  }

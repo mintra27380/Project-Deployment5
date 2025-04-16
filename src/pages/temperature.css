@@ -97,7 +97,7 @@ body, html {
   }
   
   .btn {
-    background-color: #00d97e; 
+    background-color: #00d97e; /* ✅ สีเขียว */
     color: white;
     padding: 12px 20px;
     border-radius: 8px;
@@ -109,5 +109,6 @@ body, html {
   }
   
   .btn:hover {
-    background-color: #00c36d; 
+    background-color: #00c36d; /* เขียวเข้มขึ้นเล็กน้อย */
+  }
   
