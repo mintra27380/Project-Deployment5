@@ -24,7 +24,7 @@ const DroneConfig = () => {
         <nav>
           <a className="active" href="#">View Config</a>
           <a href="/temperature">Temperature Log Form</a>
-          <a href="#">View Logs</a>
+          <a href="/result">View Logs</a>
         </nav>
       </header>
 
