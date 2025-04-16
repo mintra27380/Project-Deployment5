@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/* ---------- Global Styles & Background ---------- */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-image: url("/P.png");
+  background-size: cover;
+  background-position: center;
+  color: #333;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ---------- Header / Navbar ---------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+}
+header h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+}
+nav {
+  display: flex;
+  gap: 30px;
+  font-size: 18px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 15px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+nav a.active {
+  border-bottom: 2px solid #ffffff;
+}
+
+/* ---------- Main Layout ---------- */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 80px);
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* ---------- Center Box ---------- */
+.center-box {
+  background-color: #ffffffee;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  max-width: 1000px;
+  width: 100%;
+  padding: 30px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+/* ---------- Title ---------- */
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 25px;
+}
+
+/* ---------- Table Container ---------- */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* ---------- Table Styling ---------- */
+.log-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  color: #000;
+}
+
+/* ---------- Header ---------- */
+.log-table thead {
+  background-color: #fff4b8; /* soft yellow */
+}
+.log-table th {
+  padding: 14px 20px;
+  text-align: center;
+  border: 1px solid #ddd;
+  font-weight: 600;
+  color: #000;
+}
+
+/* ---------- Body Rows ---------- */
+.log-table td {
+  padding: 14px 20px;
+  text-align: center;
+  border: 1px solid #eee;
+  color: #000;
+}
+
+/* ---------- Alternate Row Colors ---------- */
+.log-table tbody tr:nth-child(even) {
+  background-color: #fffce3;
+}
+.log-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* ---------- Hover Effect ---------- */
+.log-table tbody tr:hover {
+  background-color: #ffe;
+  transition: background 0.2s ease-in-out;
+}
+.log-table td {
+    padding: 14px 20px;
+    text-align: center;
+    border: 1px solid #eee;
+    color: #000 !important; /* ← เปลี่ยนเป็นสีดำ */
+    font-family: "Poppins", sans-serif; /* ← ยืนยันใช้ฟอนต์ Poppins */
+    font-weight: 400;
+  }
+
+/* ---------- No Data Message ---------- */
+.no-data {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #777;
+  text-align: center;
+}

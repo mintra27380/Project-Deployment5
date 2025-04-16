@@ -1,0 +1,115 @@
+/* ---------- Global ---------- */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('/P.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  /* ---------- Header/Navbar ---------- */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+  }
+  
+  header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+  }
+  
+  nav {
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+  }
+  
+  nav a.active {
+    border-bottom: 2px solid white;
+  }
+  
+  /* ---------- Main Layout ---------- */
+  .main {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+  }
+  
+  /* ---------- Center Box ---------- */
+  .center-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    width: 500px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  
+  /* ---------- Title ---------- */
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+  
+  /* ---------- Config Info ---------- */
+  .config-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .data-item {
+    background-color: #ffffffdd;
+    color: black;
+    padding: 15px 25px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  /* ---------- Input & Button ---------- */
+  .input-box {
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    background-color: #00d97e; /* ✅ สีเขียว */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #00c36d; /* เขียวเข้มขึ้นเล็กน้อย */
+  }
+  
