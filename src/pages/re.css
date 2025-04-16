@@ -54,7 +54,7 @@ nav a.active {
   padding-right: 20px;
 }
 
-/* ---------- Center Box ---------- */
+/* ---------- Center Box (Updated) ---------- */
 .center-box {
   background-color: #ffffffee;
   border-radius: 16px;
@@ -81,39 +81,41 @@ nav a.active {
 .table-container {
   width: 100%;
   overflow-x: auto;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  padding-bottom: 10px;
 }
 
 .log-table {
-  width: 100%;
-  table-layout: auto;
-  border-collapse: collapse;
-}
-
-.log-table thead {
-  background-color: #e3f2fd;
-  color: #1976d2;
-}
-
-.log-table th,
-.log-table td {
-  padding: 14px 20px;
-  text-align: center;
-  border-bottom: 1px solid #e0e0e0;
-  white-space: nowrap;
-}
-
-.log-table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.log-table tbody tr:hover {
-  background-color: #f1faff;
-  transition: background-color 0.2s ease;
-}
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    table-layout: auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .log-table thead {
+    background-color: #e3f2fd; /* ✅ ฟ้าอ่อนแบบในภาพ */
+    color: #1976d2;
+  }
+  
+  .log-table th,
+  .log-table td {
+    padding: 14px 20px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .log-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .log-table tbody tr:hover {
+    background-color: #f1faff; /* ✅ ฟ้าจางเมื่อ hover */
+    transition: background-color 0.2s ease;
+  }
+  
 
 /* ---------- No Data Message ---------- */
 .no-data {
@@ -122,14 +124,12 @@ nav a.active {
   color: #777;
   text-align: center;
 }
-
-/* ---------- Temperature Highlight ---------- */
 .temp-cell {
-  text-align: right;
-  color: #000;
-}
-
-.temp-hot {
-  color: red;
-  font-weight: 600;
-}
+    text-align: right;
+    color: #000;
+  }
+  
+  .temp-hot {
+    color: red;
+    font-weight: 600;
+  }
