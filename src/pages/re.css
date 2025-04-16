@@ -23,17 +23,20 @@ header {
   align-items: center;
   padding: 30px 60px;
 }
+
 header h1 {
   font-size: 28px;
   font-weight: bold;
   margin: 0;
   color: #fff;
 }
+
 nav {
   display: flex;
   gap: 30px;
   font-size: 18px;
 }
+
 nav a {
   color: #fff;
   text-decoration: none;
@@ -41,6 +44,7 @@ nav a {
   border-bottom: 2px solid transparent;
   cursor: pointer;
 }
+
 nav a.active {
   border-bottom: 2px solid #ffffff;
 }
@@ -61,7 +65,7 @@ nav a.active {
   background-color: #ffffffee;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  max-width: 1400px;  /* ✅ ให้แสดงเต็ม Desktop */
+  max-width: 1400px;
   width: 100%;
   padding: 50px;
   margin-top: -30px;
@@ -108,7 +112,7 @@ nav a.active {
   padding: 14px 20px;
   text-align: center;
   border-bottom: 1px solid #e0e0e0;
-  white-space: nowrap; /* ✅ ป้องกันขึ้นบรรทัดใหม่ */
+  white-space: nowrap;
 }
 
 .log-table tbody tr:nth-child(even) {
