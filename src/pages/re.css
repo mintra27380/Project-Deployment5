@@ -56,18 +56,18 @@ nav a.active {
 
 /* ---------- Center Box ---------- */
 .center-box {
-  background-color: #ffffffee;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  max-width: 1000px;
-  width: 100%;
-  padding: 30px;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  text-align: left;
-}
+    background-color: #ffffffee;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    max-width: 1200px;    
+    width: 100%;
+    padding: 40px;          
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  
 
-/* ---------- Title ---------- */
+
 .title {
   font-size: 26px;
   font-weight: 600;
@@ -75,13 +75,12 @@ nav a.active {
   margin-bottom: 25px;
 }
 
-/* ---------- Table Container ---------- */
 .table-container {
   width: 100%;
   overflow-x: auto;
 }
 
-/* ---------- Table Styling ---------- */
+
 .log-table {
   width: 100%;
   border-collapse: collapse;
@@ -89,7 +88,7 @@ nav a.active {
   color: #000;
 }
 
-/* ---------- Header ---------- */
+
 .log-table thead {
   background-color: #fff4b8; /* soft yellow */
 }
@@ -101,7 +100,7 @@ nav a.active {
   color: #000;
 }
 
-/* ---------- Body Rows ---------- */
+
 .log-table td {
   padding: 14px 20px;
   text-align: center;
@@ -109,7 +108,7 @@ nav a.active {
   color: #000;
 }
 
-/* ---------- Alternate Row Colors ---------- */
+
 .log-table tbody tr:nth-child(even) {
   background-color: #fffce3;
 }
@@ -117,7 +116,7 @@ nav a.active {
   background-color: #ffffff;
 }
 
-/* ---------- Hover Effect ---------- */
+
 .log-table tbody tr:hover {
   background-color: #ffe;
   transition: background 0.2s ease-in-out;
@@ -126,12 +125,12 @@ nav a.active {
     padding: 14px 20px;
     text-align: center;
     border: 1px solid #eee;
-    color: #000 !important; /* ← เปลี่ยนเป็นสีดำ */
-    font-family: "Poppins", sans-serif; /* ← ยืนยันใช้ฟอนต์ Poppins */
+    color: #000 !important; 
+    font-family: "Poppins", sans-serif; 
     font-weight: 400;
   }
 
-/* ---------- No Data Message ---------- */
+
 .no-data {
   margin-top: 20px;
   font-size: 16px;
