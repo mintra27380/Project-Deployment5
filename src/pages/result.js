@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import Link from "next/link"; // ✅ เพิ่ม Link
-import './re.css'; 
+import Link from "next/link";
 
 export default function ResultPage() {
   const [logs, setLogs] = useState([]);

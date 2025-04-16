@@ -1,8 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import Link from "next/link"; // ✅ เพิ่มการ import Link
-import './temperature.css'; 
+import Link from "next/link";
 
 export default function TemperaturePage() {
   const [droneInfo, setDroneInfo] = useState({

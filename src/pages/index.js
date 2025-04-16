@@ -1,12 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import Link from "next/link"; // ✅ เพิ่มการ import
-import './Droneconfig.css';
+import Link from "next/link";
 
 const DroneConfig = () => {
   const [droneData, setDroneData] = useState(null);
-  const pathname = usePathname(); // ✅ สำหรับตรวจ path
+  const pathname = usePathname();
 
   useEffect(() => {
     fetch("https://project-deployment-0e9c.onrender.com/configs/3001")
