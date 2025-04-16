@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import './re.css'; 
+import './r.css'; 
 
 export default function ResultPage() {
   const [logs, setLogs] = useState([]);
