@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link"; // ✅ เพิ่มการ import Link
 import "./temperature.css";
 
 export default function TemperaturePage() {
@@ -11,7 +12,7 @@ export default function TemperaturePage() {
     country: "-",
   });
   const [temperature, setTemperature] = useState("");
-  const [mounted, setMounted] = useState(false); // ✅ สำคัญ: ป้องกัน Hydration error
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -23,7 +24,7 @@ export default function TemperaturePage() {
         console.error("Error parsing droneInfo:", err);
       }
     }
-    setMounted(true); // ✅ บอกว่าพร้อม render แล้ว
+    setMounted(true);
   }, []);
 
   const handleSubmit = (e) => {
@@ -44,28 +45,28 @@ export default function TemperaturePage() {
     alert("✅ Submission successful!");
   };
 
-  if (!mounted) return null; // ✅ ป้องกัน hydration mismatch
+  if (!mounted) return null;
 
   return (
     <>
       <header>
         <h1>WEB CLIENT</h1>
         <nav>
-          <a href="/" className={pathname === "/" ? "active" : ""}>
+          <Link href="/" className={pathname === "/" ? "active" : ""}>
             View Config
-          </a>
-          <a href="/temperature" className={pathname === "/temperature" ? "active" : ""}>
+          </Link>
+          <Link href="/temperature" className={pathname === "/temperature" ? "active" : ""}>
             Temperature Log Form
-          </a>
-          <a href="/result" className={pathname === "/result" ? "active" : ""}>
+          </Link>
+          <Link href="/result" className={pathname === "/result" ? "active" : ""}>
             View Logs
-          </a>
+          </Link>
         </nav>
       </header>
 
       <main className="main">
         <div className="center-box">
-          <h2 className="title">SUBMIT TEMPERATURE </h2>
+          <h2 className="title">SUBMIT TEMPERATURE</h2>
           <div className="config-box">
             <div className="data-item">Drone ID : {droneInfo.drone_id}</div>
             <div className="data-item">Drone Name : {droneInfo.drone_name}</div>

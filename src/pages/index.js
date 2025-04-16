@@ -1,18 +1,19 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import Link from "next/link"; // ✅ เพิ่มการ import
 import "./Droneconfig.css";
 
 const DroneConfig = () => {
   const [droneData, setDroneData] = useState(null);
-  const router = useRouter();
+  const pathname = usePathname(); // ✅ สำหรับตรวจ path
 
   useEffect(() => {
     fetch("https://project-deployment-0e9c.onrender.com/configs/3001")
       .then((res) => res.json())
       .then((data) => {
         setDroneData(data);
-        localStorage.setItem("droneInfo", JSON.stringify(data)); // ✅ save to localStorage
+        localStorage.setItem("droneInfo", JSON.stringify(data));
       })
       .catch((err) => console.error("Error fetching drone config:", err));
   }, []);
@@ -22,9 +23,15 @@ const DroneConfig = () => {
       <header>
         <h1>WEB CLIENT</h1>
         <nav>
-          <a className="active" href="#">View Config</a>
-          <a href="/temperature">Temperature Log Form</a>
-          <a href="/result">View Logs</a>
+          <Link href="/" className={pathname === "/" ? "active" : ""}>
+            View Config
+          </Link>
+          <Link href="/temperature" className={pathname === "/temperature" ? "active" : ""}>
+            Temperature Log Form
+          </Link>
+          <Link href="/result" className={pathname === "/result" ? "active" : ""}>
+            View Logs
+          </Link>
         </nav>
       </header>
 
